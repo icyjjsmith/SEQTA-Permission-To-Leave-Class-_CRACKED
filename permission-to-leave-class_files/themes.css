@@ -1,0 +1,1754 @@
+/*
+ * Copyright (c) SEQTA Software (a division of Saron Education Ltd.) 2014.
+ *  
+ * Created by Barry on 2014-10-30
+ */
+
+/* WISP themes */
+
+.userHTML {
+	padding: 0;
+}
+
+.userHTML > div:first-of-type {
+	padding: 8px;
+}
+
+.userHTML > div:first-of-type::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+/* Template ***************************************************************** */
+
+/*
+.userHTML .theme {
+	
+}
+
+.userHTML .theme h1,
+.userHTML .theme h2,
+.userHTML .theme h3 {
+	
+}
+
+.userHTML .theme figure,
+.userHTML .theme .imageGallery,
+.userHTML .theme .embed {
+	
+}
+
+.userHTML .theme figure figcaption {
+	
+}
+
+.userHTML .theme a {
+	
+}
+
+.userHTML .theme table {
+	
+}
+
+.userHTML .theme table thead {
+	
+}
+
+.userHTML .theme table td,
+.userHTML .theme table th {
+	
+}
+
+.userHTML .theme table tbody {
+	
+}
+*/
+
+/* Base theme *************************************************************** */
+
+/* Links */
+a:not(.resource) {
+	color: #204a87;
+	text-decoration: underline;
+	transition: text-shadow 0.5s;
+}
+
+/* Tables */
+table {
+	border: solid 1px #ccc;
+	border-collapse: collapse;
+	padding: 0;
+	line-height: normal;
+	font-size: inherit;
+	color: inherit;
+}
+
+table > thead {
+	background: #eee;
+	font-weight: bold;
+	color: #204a87;
+}
+
+table td {
+	padding: 8px;
+	border: solid 1px #ccc;
+	vertical-align: top;
+	font-size: inherit;
+	color: inherit;
+}
+
+table th {
+	padding: 8px;
+	border: solid 1px #ccc;
+	vertical-align: top;
+	font-size: inherit;
+	color: inherit;
+	background-color: #eee;
+}
+
+table td p {
+	margin: 1em 0;
+}
+
+body > li p:first-child {
+	display: inline-block;
+}
+
+h1 {
+	font-size: 175%;
+	font-weight: bold;
+	color: #204a87;
+	margin: 0;
+	padding: 0;
+}
+
+h2 {
+	font-size: 150%;
+	font-weight: bold;
+	color: #204a87;
+	margin: 0;
+	padding: 0;
+}
+
+h3 {
+	font-size: 125%;
+	font-weight: bold;
+	color: #204a87;
+	margin: 0;
+	padding: 0;
+}
+
+/* Macro: images (display) */
+
+a.imageWrapper {
+	display: inline-block;
+	margin: 16px;
+}
+
+a.imageWrapper > img {
+	padding: 0;
+	display: block;
+}
+
+figure {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 8px;
+	margin: 16px;
+	display: inline-block;
+	width: min-content;
+}
+
+figure > figcaption {
+	color: #888;
+	font-style: italic;
+	margin: 8px 0 0;
+	text-align: center;
+}
+
+figure > a:not(.resource) {
+	display: block;
+}
+
+figure > a > img {
+	box-shadow: none;
+	margin: 0;
+	padding: 0;
+	max-width: 300px;
+	max-height: 300px;
+}
+
+/* Macro: Image gallery (display) */
+
+.imageGallery {
+	clear: both;
+	display: block;
+	margin: 8px 0;
+	text-align: center;
+	border-top: 4px solid rgba(0, 0, 0, 0.1);
+	border-bottom: 4px solid rgba(0, 0, 0, 0.1);
+	padding: 4px;
+}
+
+.imageGallery a:not(.resource) {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 4px;
+}
+
+.imageGallery a > img {
+	padding: 0;
+	max-width: 120px;
+	max-height: 120px;
+	display: block;
+}
+
+/* Macro: Maths & Music */
+
+.shrinkWrap {
+	display: inline-block;
+}
+
+img.formula {
+	padding: 8px;
+	background: #fff;
+	border-radius: 2px;
+}
+
+/* Macro: Embed */
+
+.embed {
+	display: inline-block;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	box-sizing: border-box;
+}
+
+.embed.full {
+	display: block;
+	width: 100%;
+	height: 400px;
+}
+
+.embed.full iframe,
+.embed.full > .video,
+.embed.full > .rich {
+	width: 100%;
+	height: 100%;
+}
+
+.embed iframe {
+	display: block;
+}
+
+/* Macro: resource */
+
+a.resource {
+	padding: 8px 24px;
+	text-decoration: none;
+	display: inline-block;
+	background: #204a87;
+	color: #fff;
+	margin: 8px;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+	border-left-width: 8px;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+	text-shadow: 0 1px rgba(0, 0, 0, 0.5);
+	max-width: 200px;
+	word-wrap: break-word;
+}
+
+.uiMediaPlayer {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	display: inline-block;
+	background: rgba(0, 0, 0, 0.3);
+	padding: 8px;
+	border-radius: 2px;
+	box-sizing: border-box;
+	width: 300px;
+	overflow: hidden;
+}
+
+.uiMediaPlayer > .filename {
+	text-transform: uppercase;
+	font-size: 90%;
+	text-align: center;
+	margin: 0 0 8px;
+	word-wrap: break-word;
+}
+
+.uiMediaPlayer > .banner {
+	text-align: center;
+	padding: 8px;
+}
+
+.uiMediaPlayer > audio,
+.uiMediaPlayer > video {
+	display: block;
+	width: 100%;
+}
+
+/* Macro: LearningField */
+.learningfield.invalid {
+	display: block;
+	max-width: 384px;
+	margin: 32px auto;
+	border: 1px dashed #ccc;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	padding: 24px;
+	background: #f8f8f8;
+	background-image: linear-gradient(135deg, #fff, #f8f8f8);
+	border-radius: 8px;
+	box-sizing: border-box;
+}
+
+.learningfield.invalid > .message {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font-weight: bold;
+	color: #666;
+}
+
+.learningfield.invalid > .explanation {
+	margin: 0;
+	padding: 0;
+	font-size: var(--small-text);
+}
+
+/* Chocolate **************************************************************** */
+
+.userHTML .theme-chocolate {
+	background-color: #86674c;
+	background-image: url('/js/images/texture.png'),
+		repeating-linear-gradient(
+			to right,
+			rgba(0, 0, 0, 0.1),
+			rgba(0, 0, 0, 0) 30px
+		),
+		repeating-linear-gradient(
+			to right,
+			rgba(0, 0, 0, 0.1),
+			rgba(0, 0, 0, 0) 50px
+		),
+		repeating-linear-gradient(
+			to left,
+			rgba(0, 0, 0, 0.1),
+			rgba(0, 0, 0, 0) 70px
+		);
+	color: #f5f5dc;
+}
+
+.userHTML .theme-chocolate h1,
+.userHTML .theme-chocolate h2,
+.userHTML .theme-chocolate h3 {
+	color: #ffd700;
+}
+
+.userHTML .theme-chocolate figure,
+.userHTML .theme-chocolate .imageGallery,
+.userHTML .theme-chocolate .embed {
+	background: #f5f5dc;
+	border-color: #745942;
+}
+
+.userHTML .theme-chocolate figure figcaption {
+	color: #745942;
+}
+
+.userHTML .theme-chocolate a:not(.resource) {
+	color: #ffd700;
+}
+
+.userHTML .theme-chocolate table {
+	border-color: #745942;
+}
+
+.userHTML .theme-chocolate table thead {
+	background: #f5f5dc;
+	color: #745942;
+}
+
+.userHTML .theme-chocolate table td,
+.userHTML .theme-chocolate table th {
+	border-color: #745942;
+}
+
+.userHTML .theme-chocolate table tbody {
+	background: #fff;
+	color: #745942;
+}
+
+/* Black Ice **************************************************************** */
+
+.userHTML .theme-blackice {
+	background-color: #444;
+	background-image: url('/js/images/texture.png'),
+		repeating-linear-gradient(
+			to right,
+			rgba(0, 0, 0, 0.1),
+			rgba(0, 0, 0, 0) 30px
+		),
+		repeating-linear-gradient(
+			to right,
+			rgba(0, 0, 0, 0.1),
+			rgba(0, 0, 0, 0) 50px
+		),
+		repeating-linear-gradient(
+			to left,
+			rgba(0, 0, 0, 0.1),
+			rgba(0, 0, 0, 0) 70px
+		);
+	color: #ccc;
+}
+
+.userHTML .theme-blackice h1,
+.userHTML .theme-blackice h2,
+.userHTML .theme-blackice h3 {
+	color: #00d7ff;
+	text-shadow: 1px 1px 1px #000;
+}
+
+.userHTML .theme-blackice figure,
+.userHTML .theme-blackice .imageGallery,
+.userHTML .theme-blackice .embed {
+	background: #222;
+	border-color: #666;
+}
+
+.userHTML .theme-blackice figure figcaption {
+	color: #ccc;
+}
+
+.userHTML .theme-blackice a:not(.resource) {
+	color: #00d7ff;
+}
+
+.userHTML .theme-blackice table {
+	border-color: #666;
+}
+
+.userHTML .theme-blackice table thead {
+	background: #111;
+	color: #888;
+}
+
+.userHTML .theme-blackice table td,
+.userHTML .theme-blackice table th {
+	border-color: #666;
+}
+
+.userHTML .theme-blackice table tbody {
+	background: #333;
+	color: #ccc;
+}
+
+/* Marshmallow ************************************************************** */
+
+.userHTML .theme-marshmallow {
+	background-color: #ffe4e1;
+	background-image: url('/js/images/texture.png'),
+		repeating-linear-gradient(
+			to right,
+			rgba(0, 0, 0, 0.1),
+			rgba(0, 0, 0, 0) 30px
+		),
+		repeating-linear-gradient(
+			to right,
+			rgba(0, 0, 0, 0.1),
+			rgba(0, 0, 0, 0) 50px
+		),
+		repeating-linear-gradient(
+			to left,
+			rgba(0, 0, 0, 0.1),
+			rgba(0, 0, 0, 0) 70px
+		);
+	color: #400040;
+}
+
+.userHTML .theme-marshmallow h1,
+.userHTML .theme-marshmallow h2,
+.userHTML .theme-marshmallow h3 {
+	color: #db7093;
+}
+
+.userHTML .theme-marshmallow figure,
+.userHTML .theme-marshmallow .imageGallery,
+.userHTML .theme-marshmallow .embed {
+	background: #fff;
+	border-color: #ffb6c1;
+}
+
+.userHTML .theme-marshmallow figure figcaption {
+	color: #c04080;
+}
+
+.userHTML .theme-marshmallow a:not(.resource) {
+	color: #c04080;
+}
+
+.userHTML .theme-marshmallow table {
+	border-color: #ffb6c1;
+}
+
+.userHTML .theme-marshmallow table thead {
+	background: #ffdde2;
+	color: #400040;
+}
+
+.userHTML .theme-marshmallow table td,
+.userHTML .theme-marshmallow table th {
+	border-color: #ffb6c1;
+}
+
+.userHTML .theme-marshmallow table tbody {
+	background: #fff;
+}
+
+/* Moss ********************************************************************* */
+
+.userHTML .theme-moss {
+	background-color: #556b2f;
+	background-image: url('/js/images/texture.png'),
+		repeating-linear-gradient(
+			to right,
+			rgba(0, 0, 0, 0.1),
+			rgba(0, 0, 0, 0) 30px
+		),
+		repeating-linear-gradient(
+			to right,
+			rgba(0, 0, 0, 0.1),
+			rgba(0, 0, 0, 0) 50px
+		),
+		repeating-linear-gradient(
+			to left,
+			rgba(0, 0, 0, 0.1),
+			rgba(0, 0, 0, 0) 70px
+		);
+	color: #d5eaa9;
+}
+
+.userHTML .theme-moss h1,
+.userHTML .theme-moss h2,
+.userHTML .theme-moss h3 {
+	color: #9ccd32;
+}
+
+.userHTML .theme-moss figure,
+.userHTML .theme-moss .imageGallery,
+.userHTML .theme-moss .embed {
+	background: #3b4b21;
+	border-color: #262f15;
+}
+
+.userHTML .theme-moss figure figcaption {
+	color: #bedf7b;
+}
+
+.userHTML .theme-moss a:not(.resource) {
+	color: #9ccd32;
+}
+
+.userHTML .theme-moss table {
+	border-color: #262f15;
+}
+
+.userHTML .theme-moss table thead {
+	background: #3b4b21;
+	color: #bedf7b;
+}
+
+.userHTML .theme-moss table td,
+.userHTML .theme-moss table th {
+	border-color: #262f15;
+}
+
+.userHTML .theme-moss table tbody {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Carbon ****************************************************************** */
+
+.userHTML .theme-carbon {
+	background-image: url('/js/images/wisp/carbon.png');
+	color: #aaa;
+}
+
+.userHTML .theme-carbon h1,
+.userHTML .theme-carbon h2,
+.userHTML .theme-carbon h3 {
+	color: #cf3;
+	text-shadow: 0 2px 2px #000;
+}
+
+.userHTML .theme-carbon figure,
+.userHTML .theme-carbon .imageGallery,
+.userHTML .theme-carbon .embed {
+	background: #111;
+	border-color: #333;
+}
+
+.userHTML .theme-carbon figure figcaption {
+	color: #666;
+}
+
+.userHTML .theme-carbon a:not(.resource) {
+	color: #cf3;
+}
+
+.userHTML .theme-carbon table {
+	border-color: #333;
+}
+
+.userHTML .theme-carbon table thead {
+	background: #111;
+	color: #bedf7b;
+}
+
+.userHTML .theme-carbon table td,
+.userHTML .theme-carbon table th {
+	border-color: #333;
+}
+
+.userHTML .theme-carbon table tbody {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Bordeaux ***************************************************************** */
+
+.userHTML .theme-bordeaux {
+	background: #4d0f3f url('/js/images/wisp/bordeaux.jpg') fixed center;
+	color: #dacfd8;
+	text-shadow: 0 1px #000;
+}
+
+.userHTML .theme-bordeaux h1,
+.userHTML .theme-bordeaux h2,
+.userHTML .theme-bordeaux h3 {
+	color: #fff;
+	text-shadow: 0 1px 2px #000;
+}
+
+.userHTML .theme-bordeaux figure,
+.userHTML .theme-bordeaux .imageGallery,
+.userHTML .theme-bordeaux .embed {
+	background: #2f0926;
+	border-color: #22061b;
+}
+
+.userHTML .theme-bordeaux figure figcaption {
+	color: #dacfd8;
+}
+
+.userHTML .theme-bordeaux a:not(.resource) {
+	color: #fff;
+}
+
+.userHTML .theme-bordeaux table {
+	border-color: #22061b;
+}
+
+.userHTML .theme-bordeaux table thead {
+	background: #22061b;
+	color: #dacfd8;
+}
+
+.userHTML .theme-bordeaux table td,
+.userHTML .theme-bordeaux table th {
+	border-color: #22061b;
+}
+
+.userHTML .theme-bordeaux table tbody {
+	background: #35092b;
+}
+
+/* Evening Sky ************************************************************** */
+
+.userHTML .theme-evening {
+	background: #222 url('/js/images/wisp/evening-sky.jpg') fixed center;
+	color: #000;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.userHTML .theme-evening h1,
+.userHTML .theme-evening h2,
+.userHTML .theme-evening h3 {
+	color: #9f415d;
+	text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.userHTML .theme-evening figure,
+.userHTML .theme-evening .imageGallery,
+.userHTML .theme-evening .embed {
+	background-color: rgba(0, 0, 0, 0.1);
+	border-color: #5c4f54;
+}
+
+.userHTML .theme-evening figure figcaption {
+	color: #000;
+}
+
+.userHTML .theme-evening a:not(.resource) {
+	color: #5c4f54;
+}
+
+.userHTML .theme-evening table {
+	border-color: #5c4f54;
+}
+
+.userHTML .theme-evening table thead {
+	background: #aa929b;
+	color: #5c4f54;
+}
+
+.userHTML .theme-evening table td,
+.userHTML .theme-evening table th {
+	border-color: #5c4f54;
+}
+
+.userHTML .theme-evening table tbody {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Alpine ******************************************************************* */
+
+.userHTML .theme-alpine {
+	background: #fff url('/js/images/wisp/alpine.jpg') fixed center;
+	color: #000;
+	text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.userHTML .theme-alpine h1,
+.userHTML .theme-alpine h2,
+.userHTML .theme-alpine h3 {
+	color: #242;
+}
+
+.userHTML .theme-alpine figure,
+.userHTML .theme-alpine .imageGallery,
+.userHTML .theme-alpine .embed {
+	background: #fff;
+	border-color: #666;
+}
+
+.userHTML .theme-alpine figure figcaption {
+	color: #666;
+}
+
+.userHTML .theme-alpine a:not(.resource) {
+	color: #242;
+}
+
+.userHTML .theme-alpine table {
+	border-color: #333;
+}
+
+.userHTML .theme-alpine table thead {
+	background: #fff;
+	color: #000;
+}
+
+.userHTML .theme-alpine table td,
+.userHTML .theme-alpine table th {
+	border-color: #333;
+}
+
+.userHTML .theme-alpine table tbody {
+	background: rgba(255, 255, 255, 0.25);
+}
+
+/* Como ********************************************************************* */
+
+.userHTML .theme-como {
+	background: #222 url('/js/images/wisp/como.jpg') fixed center;
+	color: #000;
+}
+
+.userHTML .theme-como h1,
+.userHTML .theme-como h2,
+.userHTML .theme-como h3 {
+	color: #35494e;
+}
+
+.userHTML .theme-como figure,
+.userHTML .theme-como .imageGallery,
+.userHTML .theme-como .embed {
+	background: #35494e;
+	border-color: #333;
+}
+
+.userHTML .theme-como figure figcaption {
+	color: #fff;
+}
+
+.userHTML .theme-como a:not(.resource) {
+	color: #35494e;
+}
+
+.userHTML .theme-como table {
+	border-color: #333;
+}
+
+.userHTML .theme-como table thead {
+	background: #35494e;
+	color: #fff;
+}
+
+.userHTML .theme-como table td,
+.userHTML .theme-como table th {
+	border-color: #333;
+}
+
+.userHTML .theme-como table tbody {
+	background: #a3a78f;
+}
+
+/* Hidcote ****************************************************************** */
+
+.userHTML .theme-hidcote {
+	background: #222 url('/js/images/wisp/hidcote.jpg') fixed center;
+	color: #fff;
+}
+
+.userHTML .theme-hidcote h1,
+.userHTML .theme-hidcote h2,
+.userHTML .theme-hidcote h3 {
+	color: #a18d71;
+}
+
+.userHTML .theme-hidcote figure,
+.userHTML .theme-hidcote .imageGallery,
+.userHTML .theme-hidcote .embed {
+	background: #111;
+	border-color: #333;
+}
+
+.userHTML .theme-hidcote figure figcaption {
+	color: #666;
+}
+
+.userHTML .theme-hidcote a:not(.resource) {
+	color: #a18d71;
+}
+
+.userHTML .theme-hidcote table {
+	border-color: #333;
+}
+
+.userHTML .theme-hidcote table thead {
+	background: #111;
+	color: #a18d71;
+}
+
+.userHTML .theme-hidcote table td,
+.userHTML .theme-hidcote table th {
+	border-color: #333;
+}
+
+.userHTML .theme-hidcote table tbody {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Lezzeno ****************************************************************** */
+
+.userHTML .theme-lezzeno {
+	background: #fff url('/js/images/wisp/lezzeno.jpg') fixed center;
+	color: #000;
+}
+
+.userHTML .theme-lezzeno h1,
+.userHTML .theme-lezzeno h2,
+.userHTML .theme-lezzeno h3 {
+	color: #204a87;
+}
+
+.userHTML .theme-lezzeno figure,
+.userHTML .theme-lezzeno .imageGallery,
+.userHTML .theme-lezzeno .embed {
+	background: #111;
+	border-color: #333;
+}
+
+.userHTML .theme-lezzeno figure figcaption {
+	color: #729fcf;
+}
+
+.userHTML .theme-lezzeno a:not(.resource) {
+	color: #204a87;
+}
+
+.userHTML .theme-lezzeno table {
+	border-color: #333;
+}
+
+.userHTML .theme-lezzeno table thead {
+	background: #111;
+	color: #729fcf;
+}
+
+.userHTML .theme-lezzeno table td,
+.userHTML .theme-lezzeno table th {
+	border-color: #333;
+}
+
+.userHTML .theme-lezzeno table tbody {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Mandarin ***************************************************************** */
+
+.userHTML .theme-mandarin {
+	background: #ffb647 url('/js/images/wisp/mandarin.jpg') fixed center;
+	color: #000;
+}
+
+.userHTML .theme-mandarin h1,
+.userHTML .theme-mandarin h2,
+.userHTML .theme-mandarin h3 {
+	color: #fff;
+	text-shadow: 0 1px 2px #000;
+}
+
+.userHTML .theme-mandarin figure,
+.userHTML .theme-mandarin .imageGallery,
+.userHTML .theme-mandarin .embed {
+	background: #ffbd4e;
+	border-color: #6f2e00;
+}
+
+.userHTML .theme-mandarin figure figcaption {
+	color: #ff6b00;
+}
+
+.userHTML .theme-mandarin a:not(.resource) {
+	color: #6f2e00;
+}
+
+.userHTML .theme-mandarin table {
+	border-color: #6f2e00;
+}
+
+.userHTML .theme-mandarin table thead {
+	background: #ff6b00;
+	color: #fff;
+}
+
+.userHTML .theme-mandarin table td,
+.userHTML .theme-mandarin table th {
+	border-color: #6f2e00;
+}
+
+.userHTML .theme-mandarin table tbody {
+	background: #ffbd4e;
+}
+
+/* Newsprint **************************************************************** */
+
+.userHTML .theme-imprint {
+	background: #fcfcfc url('/js/images/wisp/paper.png');
+	color: #444;
+	font-family: 'Georgia', 'Times New Roman', serif;
+	font-size: 120%;
+}
+
+.userHTML .theme-imprint h1,
+.userHTML .theme-imprint h2,
+.userHTML .theme-imprint h3 {
+	color: #666;
+	font-weight: normal;
+}
+
+.userHTML .theme-imprint h1 {
+	color: #004;
+}
+
+.userHTML .theme-imprint h3 {
+	color: #333;
+	font-style: italic;
+}
+
+.userHTML .theme-imprint figure,
+.userHTML .theme-imprint .imageGallery,
+.userHTML .theme-imprint .embed {
+	background: #eee;
+	border: dotted 1px #ccc;
+	border-radius: 0;
+	box-shadow: 0 3px 2px -2px rgba(0, 0, 0, 0.25);
+}
+
+.userHTML .theme-imprint figure figcaption {
+	color: #666;
+}
+
+.userHTML .theme-imprint a:not(.resource) {
+	color: #204a87;
+}
+
+.userHTML .theme-imprint a:hover {
+	text-shadow: none;
+	color: #3465a4;
+}
+
+.userHTML .theme-imprint table {
+	border: none;
+	line-height: inherit;
+}
+
+.userHTML .theme-imprint table thead {
+	background: #fff;
+	text-align: left;
+	text-shadow: 0 1px #fff;
+	color: #004;
+}
+
+.userHTML .theme-imprint table td,
+.userHTML .theme-imprint table th {
+	border: none;
+	border-bottom: solid 1px #ccc;
+	border-top: solid 1px #ccc;
+}
+
+/* Stoker ******************************************************************* */
+
+.userHTML .theme-stoker {
+	background: #161111 url('/js/images/texture.png');
+	color: #bbb;
+	font-family: 'Georgia', 'Times New Roman', serif;
+	font-size: 120%;
+}
+
+.userHTML .theme-stoker h1,
+.userHTML .theme-stoker h2,
+.userHTML .theme-stoker h3 {
+	color: #c44;
+	font-weight: normal;
+	text-shadow: 0 1px #000;
+}
+
+.userHTML .theme-stoker h1 {
+	text-shadow: 0 2px #000;
+}
+
+.userHTML .theme-stoker figure,
+.userHTML .theme-stoker .imageGallery,
+.userHTML .theme-stoker .embed {
+	border: solid 2px #200;
+	background: #100;
+}
+
+.userHTML .theme-stoker table {
+	border: none;
+	line-height: inherit;
+}
+
+.userHTML .theme-stoker table thead {
+	background: #200;
+	text-align: left;
+	color: #fff;
+}
+
+.userHTML .theme-stoker table td,
+.userHTML .theme-stoker table th {
+	border: none;
+	border-top: solid 2px #200;
+	border-bottom: solid 2px #200;
+}
+
+/* Console ****************************************************************** */
+
+.userHTML .theme-console {
+	background-color: #061006;
+	background-image: repeating-linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 0.1),
+			rgba(0, 0, 0, 0) 30px
+		),
+		repeating-linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 0.1),
+			rgba(0, 0, 0, 0) 50px
+		),
+		repeating-linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) 70px);
+	color: #282;
+	font-family: 'Inconsolata', 'Droid Sans Mono', 'Consolas', monospace;
+	font-size: 110%;
+	box-shadow: inset 0 0 64px #020;
+}
+
+.userHTML .theme-console h1,
+.userHTML .theme-console h2,
+.userHTML .theme-console h3 {
+	color: #4f4;
+	text-shadow: 0 0 8px #282;
+}
+
+.userHTML .theme-console h1 {
+	font-size: 250%;
+}
+
+.userHTML .theme-console h1:after {
+	background: #141 url('/js/images/texture.png');
+	border-radius: 1px;
+	box-shadow: 0 0 8px #141;
+	content: '';
+	display: inline-block;
+	height: 0.8em;
+	vertical-align: middle;
+	width: 1ex;
+	animation-name: theme-console-blink;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	transform: skewX(3deg);
+}
+
+@keyframes theme-console-blink {
+	0% {
+		opacity: 0;
+	}
+
+	40% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	90% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+.userHTML .theme-console h2 {
+	font-size: 175%;
+}
+
+.userHTML .theme-console h3 {
+	font-size: 100%;
+}
+
+.userHTML .theme-console figure,
+.userHTML .theme-console .imageGallery,
+.userHTML .theme-console .embed {
+	border: 2px dashed #141;
+	border-radius: 0;
+}
+
+.userHTML .theme-console a:not(.resource) {
+	color: #26f;
+	font-style: italic;
+}
+
+.userHTML .theme-console table {
+	border: none;
+}
+
+.userHTML .theme-console table thead {
+	background: #141;
+	color: #4f4;
+	text-align: left;
+}
+
+.userHTML .theme-console table td,
+.userHTML .theme-console table th {
+	border: none;
+	border-bottom: 1px solid #222;
+	border-top: 1px solid #222;
+}
+
+/* Happyland **************************************************************** */
+
+.userHTML .theme-happyland {
+	background: url('/js/images/wisp/happyland-a.png') no-repeat bottom right,
+		url('/js/images/wisp/happyland-b.png') no-repeat top left, #bed8e9;
+	font-family: 'Comic Sans MS', sans-serif;
+	text-shadow: 0 2px 4px #fff, 0 1px 2px #fff;
+}
+
+.userHTML .theme-happyland h1,
+.userHTML .theme-happyland h2,
+.userHTML .theme-happyland h3 {
+	text-shadow: inherit;
+}
+
+.userHTML .theme-happyland figure,
+.userHTML .theme-happyland .imageGallery,
+.userHTML .theme-happyland .embed {
+	background: #fff;
+	border: none;
+	box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+.userHTML .theme-happyland figure figcaption {
+	font-style: normal;
+}
+
+.userHTML .theme-happyland table {
+	box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5);
+	background: #fff;
+}
+
+.userHTML .theme-happyland table td,
+.userHTML .theme-happyland table th {
+	border: solid 1px #fff;
+}
+
+/* Royal ******************************************************************** */
+
+.userHTML .theme-royal {
+	background: url('/js/images/wisp/royal-edge.png') repeat-y top left,
+		url('/js/images/wisp/royal.png') repeat top left;
+	padding-left: 64px;
+	font-family: 'Georgia', 'Times New Roman', serif;
+	font-size: 120%;
+	color: #d8cedf;
+	text-shadow: 0 1px #000;
+}
+
+.userHTML > div.theme-royal:first-of-type {
+	padding-left: 64px;
+}
+
+.userHTML .theme-royal h1,
+.userHTML .theme-royal h2,
+.userHTML .theme-royal h3 {
+	color: #fff;
+	font-weight: normal;
+	text-shadow: 0 2px 1px #000;
+}
+
+.userHTML .theme-royal figure,
+.userHTML .theme-royal .imageGallery,
+.userHTML .theme-royal .embed {
+	border-radius: 0;
+	border: solid 4px #161417;
+	box-shadow: none;
+	background: #221f24;
+}
+
+.userHTML .theme-royal a:not(.resource) {
+	color: #fff;
+}
+
+.userHTML .theme-royal table {
+	border: none;
+	box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.25);
+}
+
+.userHTML .theme-royal table thead {
+	background: #161417;
+	color: #fff;
+}
+
+.userHTML .theme-royal table td,
+.userHTML .theme-royal table th {
+	border: solid 1px #161417;
+}
+
+.userHTML .theme-royal table tbody {
+	background: rgba(0, 0, 0, 0.1);
+}
+
+/* Aluminium **************************************************************** */
+
+.userHTML .theme-aluminium {
+	background: #f4f4f4 url('/js/images/wisp/aluminium.png');
+	font-family: Helvetica, Arial, sans-serif;
+	text-shadow: 0 1px #fff;
+}
+
+.userHTML .theme-aluminium h1,
+.userHTML .theme-aluminium h2,
+.userHTML .theme-aluminium h3 {
+	color: #601c44;
+	font-weight: normal;
+	text-shadow: inherit;
+	background: #d2c3cc;
+	background: rgba(96, 28, 68, 0.2);
+	padding: 0 0.25em;
+	display: block;
+}
+
+.userHTML .theme-aluminium figure,
+.userHTML .theme-aluminium .imageGallery,
+.userHTML .theme-aluminium .embed {
+	border: solid 1px #601c44;
+	border-radius: 0;
+	box-shadow: 0 0 0 4px rgba(96, 28, 62, 0.2);
+	background: #fff;
+	padding: 16px;
+}
+
+.userHTML .theme-aluminium figure figcaption {
+	margin: 16px 0 0;
+	font-style: normal;
+	color: #601c44;
+}
+
+.userHTML .theme-aluminium a:not(.resource) {
+	color: #601c44;
+}
+
+.userHTML .theme-aluminium a:hover {
+	text-shadow: none;
+	background-color: #d2c3cc;
+}
+
+.userHTML .theme-aluminium table {
+	border: solid 1px #601c44;
+	box-shadow: 0 0 0 4px rgba(96, 28, 62, 0.2);
+	background: #fff;
+	margin: 32px 4px;
+}
+
+.userHTML .theme-aluminium table thead {
+	color: #601c44;
+}
+
+.userHTML .theme-aluminium table td,
+.userHTML .theme-aluminium table th {
+	border-color: #601c44;
+}
+
+.userHTML .theme-aluminium table th {
+	background: #d2c3cc;
+}
+
+/* Immersed ***************************************************************** */
+
+.userHTML .theme-immersed {
+	background: url('/js/images/wisp/immersed-rays.png') no-repeat top center,
+		url('/js/images/wisp/immersed-texture.png'),
+		url('/js/images/wisp/immersed-main.png') repeat-x top left, #253446;
+	font-family: 'Helvetica', 'Arial', sans-serif;
+	color: #fff;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+	box-shadow: inset 0 40px 80px rgba(37, 52, 70, 0.25);
+}
+
+.userHTML .theme-immersed h1,
+.userHTML .theme-immersed h2,
+.userHTML .theme-immersed h3 {
+	color: #fff;
+	color: rgba(255, 255, 255, 0.9);
+	font-weight: normal;
+	text-shadow: inherit;
+}
+
+.userHTML .theme-immersed figure,
+.userHTML .theme-immersed .imageGallery,
+.userHTML .theme-immersed .embed {
+	border-radius: 0;
+	border: solid 1px #33bfff;
+	box-shadow: 0 0 0 4px rgba(37, 52, 70, 0.5);
+	background: #253446;
+}
+
+.userHTML .theme-immersed figure figcaption {
+	color: #33bfff;
+}
+
+.userHTML .theme-immersed a:not(.resource) {
+	color: #fff;
+}
+
+.userHTML .theme-immersed table {
+	border: none;
+	box-shadow: 0 0 0 4px rgba(37, 52, 70, 0.5);
+}
+
+.userHTML .theme-immersed table thead {
+	background: #3c749f;
+	color: #fff;
+}
+
+.userHTML .theme-immersed table td,
+.userHTML .theme-immersed table th {
+	border: solid 1px #3c749f;
+	border-left: none;
+	border-right: none;
+}
+
+.userHTML .theme-immersed table tbody {
+	background: rgba(0, 0, 0, 0.1);
+}
+
+/* Splat ******************************************************************* */
+
+.userHTML .theme-splat {
+	font-family: Arial, sans-serif;
+	background: none;
+	position: relative;
+	color: #fff;
+	background: #000;
+}
+
+/*noinspection CssOptimizeSimilarProperties*/
+.userHTML .theme-splat h1,
+.userHTML .theme-splat h2,
+.userHTML .theme-splat h3 {
+	color: #fff;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+	background-repeat: no-repeat;
+	background-position: center left;
+	box-sizing: border-box;
+}
+
+.userHTML .theme-splat h1 {
+	background-image: url('/js/images/wisp/splat/h1.png');
+	height: 273px;
+	margin: -110px 0;
+	padding: 100px 0 0;
+}
+
+.userHTML .theme-splat h2 {
+	background-image: url('/js/images/wisp/splat/h2.png');
+	height: 179px;
+	margin: -70px 0;
+	padding: 60px 0 0;
+}
+
+.userHTML .theme-splat h3 {
+	background-image: url('/js/images/wisp/splat/h3.png');
+	height: 179px;
+	margin: -70px 0;
+	padding: 80px 0 0;
+}
+
+.userHTML .theme-splat a:not(.resource) {
+	color: #8ae234;
+	background: none;
+	padding: 0;
+}
+
+.userHTML .theme-splat figure,
+.userHTML .theme-splat .imageGallery,
+.userHTML .theme-splat .embed {
+	border: 2px solid #222;
+	border-radius: 4px;
+	box-shadow: 4px 4px 4px -2px rgb(138, 226, 52),
+		-4px -4px 4px 2px rgb(252, 233, 79), 4px -4px 4px 2px #ef2929,
+		-4px 4px 4px 2px #729fcf;
+	position: relative;
+	background: #111;
+}
+
+.userHTML .theme-splat table {
+	border: 1px dotted #222;
+}
+
+.userHTML .theme-splat table thead {
+	background: #111;
+	color: #fce94f;
+}
+
+.userHTML .theme-splat table td,
+.userHTML .theme-splat table th {
+	border: 1px dotted #222;
+}
+
+/* Sepia ******************************************************************* */
+
+.userHTML .theme-sepia {
+	font-family: Georgia, serif;
+	background-color: #837969;
+	background-image: linear-gradient(
+			to bottom,
+			rgba(179, 92, 27, 0.1),
+			rgba(59, 60, 56, 0.1)
+		),
+		url('/js/images/wisp/sepia/texture.png'),
+		url('/js/images/wisp/sepia/alpha.png'),
+		url('/js/images/wisp/sepia/beta.png'),
+		url('/js/images/wisp/sepia/gamma.png');
+	color: #eedbae;
+	text-shadow: 0 1px 1px #444542;
+	font-size: 125%;
+}
+
+.userHTML .theme-sepia h1,
+.userHTML .theme-sepia h2,
+.userHTML .theme-sepia h3 {
+	color: #e5d8bd;
+	font-weight: normal;
+	text-align: center;
+	text-shadow: 0 1px 1px #444542, 0 -1px #fff;
+}
+
+.userHTML .theme-sepia figure,
+.userHTML .theme-sepia .imageGallery,
+.userHTML .theme-sepia .embed {
+	background: rgba(255, 255, 255, 0.5);
+	border: none;
+	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.userHTML .theme-sepia figure {
+	transform: rotate(1deg);
+}
+
+.userHTML .theme-sepia figure + figure {
+	transform: rotate(-1deg);
+}
+
+.userHTML .theme-sepia a:not(.resource) {
+	color: #fff;
+	font-weight: normal;
+	background: transparent;
+	box-shadow: none;
+	padding: 0;
+	text-shadow: 0 1px 1px #444542;
+}
+
+.userHTML .theme-sepia figure figcaption {
+	color: #6e5235;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.userHTML .theme-sepia figure img {
+	border-radius: 2px;
+	border: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+.userHTML .theme-sepia table {
+	margin: 0 auto;
+	background: rgba(229, 216, 189, 0.8);
+	color: #837969;
+	text-shadow: none;
+	border-color: #837969;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.userHTML .theme-sepia table thead {
+	background: rgba(255, 255, 255, 0.5);
+	text-align: center;
+	font-weight: normal;
+	color: #6e5235;
+}
+
+.userHTML .theme-sepia table td,
+.userHTML .theme-sepia table th {
+	border-color: #837969;
+}
+
+.userHTML .theme-sepia table th {
+	font-weight: normal;
+}
+
+/* Clarity and clarity dark ******************************************************************* */
+
+.userHTML .theme-clarity,
+.userHTML .theme-clarity-dark {
+	font-family: Georgia, serif;
+	background: #fff;
+	font-size: 150%;
+	line-height: 2;
+	max-width: 80ex;
+	margin: 4ex auto;
+	border-radius: 2px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.userHTML .theme-clarity-dark {
+	background: #222;
+	border-color: #000;
+	color: #999;
+}
+
+.userHTML > div.theme-clarity:first-of-type,
+.userHTML > div.theme-clarity-dark:first-of-type {
+	padding: 6ex;
+}
+
+@media (max-width: 320px) {
+	.userHTML > div.theme-clarity:first-of-type,
+	.userHTML > div.theme-clarity-dark:first-of-type {
+		padding: 1ex;
+	}
+}
+
+@media (max-width: 640px) {
+	.userHTML > div.theme-clarity:first-of-type,
+	.userHTML > div.theme-clarity-dark:first-of-type {
+		padding: 2ex;
+	}
+}
+
+.userHTML .theme-clarity h1,
+.userHTML .theme-clarity h2,
+.userHTML .theme-clarity h3,
+.userHTML .theme-clarity-dark h1,
+.userHTML .theme-clarity-dark h2,
+.userHTML .theme-clarity-dark h3 {
+	color: #444;
+	font-weight: normal;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+	line-height: 1;
+	padding: 1ex 0 0;
+}
+
+.userHTML .theme-clarity h1 {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.userHTML .theme-clarity-dark h1 {
+	border-bottom: 1px solid #666;
+}
+
+.userHTML .theme-clarity th {
+	font-weight: normal;
+	color: #444;
+}
+
+.userHTML .theme-clarity-dark td,
+.userHTML .theme-clarity-dark th {
+	border-color: #555;
+}
+
+.userHTML .theme-clarity-dark th {
+	font-weight: normal;
+	background-color: #333;
+	color: #ccc;
+}
+
+/* Graph ******************************************************************* */
+
+.userHTML .theme-graph {
+	background-image: repeating-linear-gradient(
+			to right,
+			rgba(170, 221, 255, 0),
+			rgba(170, 221, 255, 0) 15px,
+			rgba(170, 221, 255, 0.4) 16px,
+			rgba(170, 221, 255, 0) 16px
+		),
+		repeating-linear-gradient(
+			to bottom,
+			rgba(170, 221, 255, 0),
+			rgba(170, 221, 255, 0) 15px,
+			rgba(170, 221, 255, 0.4) 16px,
+			rgba(170, 221, 255, 0) 16px
+		);
+	font-family: Arial, sans-serif;
+	color: #204a87;
+	font-size: 150%;
+	line-height: 3ex;
+	max-width: 80ex;
+	margin: 0 auto;
+	border-radius: 2px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.userHTML > div.theme-graph:first-of-type {
+	padding: 4ex;
+}
+
+@media (max-width: 320px) {
+	.userHTML > div.theme-graph:first-of-type {
+		padding: 1ex;
+	}
+}
+
+@media (max-width: 640px) {
+	.userHTML > div.theme-graph:first-of-type {
+		padding: 2ex;
+	}
+}
+
+.userHTML .theme-graph h1,
+.userHTML .theme-graph h2,
+.userHTML .theme-graph h3 {
+	color: #a40000;
+	font-weight: normal;
+	padding: 1ex 0 0;
+}
+
+/* Mosaic ******************************************************************* */
+
+.userHTML .theme-mosaic {
+	/* http://lea.verou.me/css3patterns/#brady-bunch */
+	background-image: linear-gradient(
+			to top,
+			rgba(255, 255, 255, 0.8),
+			rgba(255, 255, 255, 0.8)
+		),
+		radial-gradient(
+			closest-side,
+			transparent 0%,
+			transparent 75%,
+			#b6cc66 76%,
+			#b6cc66 85%,
+			#edffdb 86%,
+			#edffdb 94%,
+			#fff 95%,
+			#fff 103%,
+			#d9e6a7 104%,
+			#d9e6a7 112%,
+			#798b3c 113%,
+			#798b3c 121%,
+			#fff 122%,
+			#fff 130%,
+			#e0ead7 131%,
+			#e0ead7 140%
+		),
+		radial-gradient(
+			closest-side,
+			transparent 0%,
+			transparent 75%,
+			#b6cc66 76%,
+			#b6cc66 85%,
+			#edffdb 86%,
+			#edffdb 94%,
+			#fff 95%,
+			#fff 103%,
+			#d9e6a7 104%,
+			#d9e6a7 112%,
+			#798b3c 113%,
+			#798b3c 121%,
+			#fff 122%,
+			#fff 130%,
+			#e0ead7 131%,
+			#e0ead7 140%
+		);
+	background-size: 110px 110px;
+	background-color: #c8d3a7;
+	background-position: 0 0, 55px 55px;
+	font-family: Arial, sans-serif;
+	color: #4f5443;
+	font-size: 150%;
+	line-height: 2;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.userHTML > div.theme-mosaic:first-of-type {
+	padding: 4ex;
+}
+
+@media (max-width: 320px) {
+	.userHTML > div.theme-mosaic:first-of-type {
+		padding: 1ex;
+	}
+}
+
+@media (max-width: 640px) {
+	.userHTML > div.theme-mosaic:first-of-type {
+		padding: 2ex;
+	}
+}
+
+.userHTML .theme-mosaic h1,
+.userHTML .theme-mosaic h2,
+.userHTML .theme-mosaic h3 {
+	color: #4f5443;
+	font-weight: normal;
+	margin: 1ex 0;
+}
+
+.userHTML .theme-mosaic th {
+	text-shadow: none;
+	font-weight: normal;
+}
